@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "flask_blueprint_tutorial"
+version = "0.1.1"
+description = "Organize your Flask applications neatly via Blueprints."
+authors = ["Todd Birchard <todd@hackersandslackers.com>"]
+maintainers = ["Todd Birchard <todd@hackersandslackers.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://hackersandslackers.com/flask-blueprints/"
+repository = "https://github.com/hackersandslackers/flask-blueprint-tutorial/"
+documentation = "https://hackersandslackers.com/flask-blueprints/"
+keywords = ["Flask", "Flask-Blueprints", "Framework", "Python", "Tutorial"]
+
+[tool.poetry.dependencies]
+python = "^3.10,<4"
+flask = "*"
+flask_assets = "*"
+python-dotenv = "*"
+faker = "*"
+lesscpy = "*"
+cssmin = "*"
+jsmin = "*"
+black = "*"
+isort = "*"
+flake8 = "*"
+mypy = "*"
+gunicorn = "*"
+
+[tool.poetry.scripts]
+run = "wsgi:app"
+
+[tool.poetry.urls]
+issues = "https://github.com/hackersandslackers/flask-blueprint-tutorial/issues"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = "C0103,C0301,W0703,W0621"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["flask_blueprint_tutorial", "config", "wsgi"]
